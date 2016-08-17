@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:style/Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Action_bar_style" parent="@style/AppTheme">
+        <item name="android:actionBarStyle">@style/action_bar_background</item>
+    </style>
+    <style name="first_screen" parent="android:style/Theme.Holo.Light.NoActionBar">
+
+    </style>
+    <style name="action_bar_background" parent="android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/action_bar_background</item>
+    </style>
+    <style name="numpad">
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">#ffffff</item>
+    </style>
+    <style name="facepattern">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">#ffffff</item>
+    </style>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.teamproject.applock.FirstScreen">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/image_start"
+        android:src="@drawable/first_image"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/image" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/start_button"
+        android:text="@string/start_button"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="nextScreen"/>
+
+    <TextView
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/first_screen_message"
+        android:textColor="#ffffff"
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:layout_marginTop="77dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="By tapping 'Start', you agree to the"
+        android:id="@+id/message2"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_above="@+id/message4"
+        android:layout_centerHorizontal="true"
+ />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=" License Agreement"
+        android:id="@+id/license_Agreement"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/start_button"
+        android:layout_toLeftOf="@id/message4"
+        android:textStyle="italic"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=" and"
+        android:id="@+id/message4"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/start_button"
+        />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=" Privacy Policy"
+        android:id="@+id/privacypolicy"
+        android:textColor="#ffffff"
+        android:layout_toRightOf="@id/message4"
+        android:layout_above="@+id/start_button"
+        android:textStyle="italic"/>
+</RelativeLayout>

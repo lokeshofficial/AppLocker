@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.teamproject.applock.LockTypes">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/locktypes_heading"
+        android:text="Locks"
+        android:textColor="#1624a1"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"/>
+<ListView
+    android:layout_below="@id/locktypes_heading"
+    android:paddingLeft="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lock_types"></ListView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/selected_lock"
+        android:text="Selected Lock"
+        android:layout_marginTop="30dp"
+        android:textColor="#1624a1"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@id/lock_types"/>
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_below="@id/selected_lock"
+    android:paddingLeft="20dp"
+    android:layout_height="wrap_content">
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rPIN"
+        android:onClick="changeLock"
+        android:text="PIN"/>
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rImage"
+        android:onClick="changeLock"
+        android:text="Image"/>
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rImagePattern"
+        android:onClick="changeLock"
+        android:text="Image Pattern"/>
+</RadioGroup>
+</RelativeLayout>

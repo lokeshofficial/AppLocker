@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.teamproject.applock">
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        android:name="android.permission.FORCE_STOP_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:allowClearUserData="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="App Locker"
+        android:supportsRtl="true"
+        android:theme="@style/Action_bar_style">
+        <activity
+            android:name=".LockedApps"
+            android:noHistory="true" />
+        <activity
+            android:name=".Settings"
+            android:label="Settings"
+            android:parentActivityName=".LockedApps" />
+        <activity
+            android:name=".Help"
+            android:label="Help,Feedback."
+            android:parentActivityName=".LockedApps" />
+        <activity
+            android:name=".About"
+            android:label="About"
+            android:parentActivityName=".LockedApps" />
+        <activity
+            android:name=".AllApps"
+            android:label="All Apps"
+            android:parentActivityName=".LockedApps" />
+        <activity
+            android:name=".Pin_Check"
+            android:excludeFromRecents="true"
+            android:label="Enter PIN"
+            android:theme="@style/first_screen" />
+        <activity
+            android:name=".Pin_initialize"
+            android:label="Set PIN"
+            android:theme="@style/first_screen" />
+        <activity
+            android:name=".LockTypes"
+            android:label="Lock Types"
+            android:parentActivityName=".Settings" />
+        <activity
+            android:name=".FirstScreen"
+            android:theme="@style/first_screen" />
+        <activity
+            android:name=".LaunchActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".LockService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver android:name=".HomeReciever">
+            <intent-filter>
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".MyReciever">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".AdminReciever"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/my_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".FacePattern"
+            android:label="Image Pattern"
+            android:theme="@style/first_screen" />
+        <activity android:name=".FacePatternInitialization"
+            android:label="set Images"
+            ></activity>
+    </application>
+
+</manifest>
